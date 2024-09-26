@@ -19,8 +19,8 @@ export const Colors = {
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
     navBar: 'dark' as NavBarColor, // Ensure consistent type
-    inputbackground: '#c0c0c0',
-    placeholder: '#797777',
+    inputbackground: 'rgb(237, 237, 237)',
+    placeholder: 'rgb(128, 128, 128)',
     preview: '#c7c7c7',
   },
   dark: {

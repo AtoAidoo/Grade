@@ -41,6 +41,11 @@ const PagesLayout = () => {
           </View>
         }
       }}/>
+      <Stack.Screen
+      name='SecondCam'
+      options={{
+        headerShown: false,
+      }}/>
       
     </Stack>
   )

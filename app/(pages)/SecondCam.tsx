@@ -7,7 +7,7 @@ import { AntDesign, Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 
 
-const Camera = () => {
+const SecondCam = () => {
   const [pickedImage, setPickedImage] = useState<string | null>(null);
   const [TakenImage, setTakenImage] = useState<string | null>(null);
   const backgroundColor = useThemeColor({}, 'background')
@@ -66,7 +66,7 @@ const Camera = () => {
     buttonShown= 
     <View style={styles.confirm}>
       <TouchableOpacity style={[styles.border, {borderColor: tintColor,}]} onPress={() => { 
-        router.push('/SecondCam')
+        router.push('/Sheet')
       }}>
       <Ionicons name='checkmark-sharp' size={30} color={tintColor}  />
       </TouchableOpacity>
@@ -78,8 +78,8 @@ const Camera = () => {
   
   return (
     <SafeAreaView style={[styles.container, {backgroundColor}]}>
-      <View style={{ width: '100%', marginTop: 50, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{color: textColor, fontSize: 20, fontWeight: '600'}}>Input Answer sheet</Text>
+        <View style={{ width: '100%', marginTop: 50, justifyContent: 'center', alignItems: 'center'}}>
+        <Text style={{color: textColor, fontSize: 20, fontWeight: '600'}}>Input Student sheet</Text>
         </View>
       <View style={[styles.imagePreview, {backgroundColor: previewColor, borderColor: tintColor}]}>
         {imagePreview}
@@ -94,7 +94,7 @@ const Camera = () => {
   )
 }
 
-export default Camera
+export default SecondCam
 
 const styles = StyleSheet.create({
   container: {

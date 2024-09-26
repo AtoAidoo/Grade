@@ -39,9 +39,9 @@ const FormInput = ({title, value, handleChangeText, placeholder}:{
         secureTextEntry= {title === 'Password' && !showPassword}
         />
 
-        {/* <Checkbox /> */}
+        
 
-    {title === 'Password' && (
+    {title === 'Password' && value !== "" && (
         <TouchableOpacity  onPress={() => setshowPassword(!showPassword)}>
             <Ionicons name={iconPics} style={{paddingLeft: 10}} size={24} color={textColor} />
         </TouchableOpacity>

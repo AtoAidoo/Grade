@@ -20,7 +20,7 @@ const Signup = () => {
     <SafeAreaView style={styles.container}>
      <View style={{justifyContent: 'center', alignItems: 'center',}}> 
       <Logo size={20} />
-      <Text style={[styles.Text, {color: textColor}]}>Register to Space</Text>
+      <Text style={[styles.Text, {color: textColor}]}>Register to Grade</Text>
       </View>
       <FormInput
       title= 'Username'

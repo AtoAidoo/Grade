@@ -20,7 +20,7 @@ const Login = () => {
     <SafeAreaView style={styles.container}>
      <View style={{justifyContent: 'center', alignItems: 'center',}}> 
       <Logo size={20} />
-      <Text style={[styles.Text, {color: textColor}]}>Login to Space</Text>
+      <Text style={[styles.Text, {color: textColor}]}>Login to Grade</Text>
       </View>
       <FormInput
       title= 'Email'
@@ -37,12 +37,12 @@ const Login = () => {
       <View style={{flexDirection: 'row', justifyContent: 'space-between', marginVertical: 20}}>
       <Checkbox
        Label={'Remember Me'} />
-       <Link style={{color: textColor}} onPress={() => {styles.select}} href={'./Forget'}>Forgot Password?</Link>
+       <Link style={{color: tintColor}} onPress={() => {styles.select}} href={'./Forget'}>Forgot Password?</Link>
        </View>
 
       <Button 
       title='Login'
-      handlepress={() => {router.push('/Home')}} />
+      handlepress={() => {router.replace('/Home')}} />
 
     <View style={styles.Register}>
     <Text style={{color: textColor}}>Don't have an account? </Text>

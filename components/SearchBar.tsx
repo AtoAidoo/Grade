@@ -1,42 +1,53 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import React from 'react'
-import { useThemeColor } from '@/hooks/useThemeColor'
-import { Ionicons } from '@expo/vector-icons'
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import React, { useState } from "react";
+import { useThemeColor } from "@/hooks/useThemeColor";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
-
-const SearchBar = ({placeholder}:{
-    placeholder: string
+const SearchBar = ({ placeholder, label, value, handleTextChange, }:{
+    placeholder: string; label: string; value: any; handleTextChange: any;
 }) => {
-    const textColor = useThemeColor({}, 'text')
+  const textColor = useThemeColor({}, "text");
+  const tintColor = useThemeColor({}, "tint");
+  
   return (
-    <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-      <TextInput 
-      style={[styles.container, {color: '#fff'}]}
-      placeholder={placeholder}
-      placeholderTextColor={'silver'}
-      />
-      <TouchableOpacity style={styles.search}>
-      <Ionicons name='search' size={20} color={'#fff'} />
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <View style={styles.Field}>
+        <TextInput
+          style={[{ flex: 1, color: "#fff" }]}
+          placeholderTextColor={"#ffffffd5"}
+          placeholder={placeholder}
+          value={value}
+          onChangeText={handleTextChange}
+        />
+        <MaterialIcons style={{paddingLeft: 10}} name={'search'} size={20} color="#fff" />
+      </View>
     </View>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;
 
 const styles = StyleSheet.create({
-    container:{
-        borderColor: '#636060',
-        borderWidth: 2,
-        borderRadius: 20,
-        height: 50,
-        width: '100%',
-        backgroundColor: '#636060',
-        paddingHorizontal: 10,
-        paddingRight: 30,
-        marginRight: 20,
-    },
-    search:{
-        marginLeft: -40
-    }
-})
+  container: {
+    width: "100%",
+  },
+
+  Field: {
+    width: "100%",
+    height: 50,
+    backgroundColor: "gray",
+    paddingHorizontal: 10,
+    marginBottom: 5,
+    borderRadius: 10,
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+
+});

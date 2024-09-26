@@ -28,6 +28,17 @@ const AuthLayout = () => {
       options={{
         headerShown: true,
       }}/>
+      <Stack.Screen
+      name='Recover'
+      options={{
+        headerShown: true,
+      }}/>
+      <Stack.Screen
+      name='Startup'
+      options={{
+        headerShown: false,
+      }}/>
+      
     </Stack>
   )
 }
